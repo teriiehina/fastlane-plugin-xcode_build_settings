@@ -11,10 +11,11 @@ describe Fastlane::Helper::XcodeBuildSettingsHelper do
 
     before(:each) do
       @helper = Fastlane::Helper::XcodeBuildSettingsHelper
+      @dumb_config = Hash.new
       @dumb_config[:project_path]   = "/tmp/fastlane/tests/fastlane/bundle.xcodeproj"
-      @dumb_config[:scheme]         =  "bundle", 
-      @dumb_config[:configuration]  =  "Debug", 
-      @dumb_config[:build_setting]  =  "MTL_ENABLE_DEBUG_INFO" }
+      @dumb_config[:scheme]         =  "bundle"
+      @dumb_config[:configuration]  =  "Debug" 
+      @dumb_config[:build_setting]  =  "MTL_ENABLE_DEBUG_INFO"
     end
 
     it "construct a command line with the project path" do
