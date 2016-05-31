@@ -3,7 +3,7 @@ module Fastlane
     module SharedValues
       XCODE_BUILD_SETTINGS_RESULT = :XCODE_BUILD_SETTINGS_RESULT
     end
-    
+
     class XcodeBuildSettingsAction < Action
       def self.run(params)
         command = Helper::XcodeBuildSettingsHelper.generate_xcodebuild_command(params)
@@ -49,7 +49,7 @@ module Fastlane
       def self.is_supported?(platform)
         true
       end
-      
+
       def self.output
         [
           ['XCODE_BUILD_SETTINGS_RESULT', 'The value of the build setting']
